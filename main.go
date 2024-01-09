@@ -4,21 +4,21 @@ import "fmt"
 
 func main() {
 
-	// strings
-	var nameOne string = "George"
-	var nameTwo = "Lucas"
-	var nameThree string
+	// ints
+	var ageOne int = 20
+	var ageTwo = 30
+	ageThree := 40
 
-	fmt.Println(nameOne, nameTwo)
-	fmt.Println(nameTwo)
-	fmt.Println(nameThree)
+	fmt.Println(ageOne, ageTwo, ageThree)
 
-	nameOne = "peach"
-	nameThree = "bowser"
+	// bits & memory
+	var numOne int8 = 25
+	var numTwo int8 = -120
+	var numThree uint8 = 25 //unsigned: only positive numbers
 
-	fmt.Println(nameOne, nameThree)
+	// floats
+	var scoreOne float32 = 25.98
+	var scoreTwo float64 = 3827382348328947238947.322 // using this float for more precision
+	scoreThree := 1.4
 
-	nameFour := "yoshi"
-
-	fmt.Println(nameFour)
 }
