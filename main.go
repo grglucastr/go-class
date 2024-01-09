@@ -3,22 +3,26 @@ package main
 import "fmt"
 
 func main() {
+	age := 35
+	name := "shaun"
 
-	// ints
-	var ageOne int = 20
-	var ageTwo = 30
-	ageThree := 40
+	// Print
+	fmt.Print("hello, ")
+	fmt.Print("world!\n")
 
-	fmt.Println(ageOne, ageTwo, ageThree)
+	// Println
+	fmt.Println("hello ninjas!")
+	fmt.Println("goodbye ninjas!")
+	fmt.Println("my age is:", age, "and my name is: ", name)
 
-	// bits & memory
-	var numOne int8 = 25
-	var numTwo int8 = -120
-	var numThree uint8 = 25 //unsigned: only positive numbers
+	// Printf (formatted strings) %_ = format specifier
+	fmt.Printf("My age is %v and my name is %v\n", age, name)
+	fmt.Printf("My age is %q and my name is %q\n", age, name)
+	fmt.Printf("age is of type %T \n", age)
+	fmt.Printf("You scored %0.1f points \n", 225.55)
 
-	// floats
-	var scoreOne float32 = 25.98
-	var scoreTwo float64 = 3827382348328947238947.322 // using this float for more precision
-	scoreThree := 1.4
+	// Sprintf (save formatted strings)
+	var str = fmt.Sprintf("my age is %v and my name is %v", age, name)
+	fmt.Println("the saved string is: ", str)
 
 }
