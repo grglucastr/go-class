@@ -3,26 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	age := 35
-	name := "shaun"
+	var ages[3] int = [3] int {20, 25, 32}
+	var agess = [3]int {20, 25, 32}
 
-	// Print
-	fmt.Print("hello, ")
-	fmt.Print("world!\n")
+	names := [4]string {"yoshi", "mario", "peach", "bowser"}
 
-	// Println
-	fmt.Println("hello ninjas!")
-	fmt.Println("goodbye ninjas!")
-	fmt.Println("my age is:", age, "and my name is: ", name)
-
-	// Printf (formatted strings) %_ = format specifier
-	fmt.Printf("My age is %v and my name is %v\n", age, name)
-	fmt.Printf("My age is %q and my name is %q\n", age, name)
-	fmt.Printf("age is of type %T \n", age)
-	fmt.Printf("You scored %0.1f points \n", 225.55)
-
-	// Sprintf (save formatted strings)
-	var str = fmt.Sprintf("my age is %v and my name is %v", age, name)
-	fmt.Println("the saved string is: ", str)
+	fmt.Println(ages, len(ages))
+	fmt.Println(agess, len(agess))
+	fmt.Println(names, len(names))
 
 }
