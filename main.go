@@ -12,9 +12,17 @@ func sayBye(name string){
 	fmt.Printf("Goodbye %v\n", name)
 }
 
-func main() {
-	sayGreeting("mario")
-	sayGreeting("luigi")
+func cycleNames(names[] string, f func(string)){
+	for _, value := range names{
+		f(value)
+	}
+}
 
-	sayBye("mario")
+func main() {
+
+	names := []string{"cloud", "tifa", "barret"}
+	
+	cycleNames(names, sayGreeting)
+	cycleNames(names, sayBye)
+
 }
