@@ -7,9 +7,9 @@ import (
 func main() {
 
 	names := []string {"mario", "luigi", "yoshi", "peach"}
-
-	for i := 0; i < len(names); i++ {
-		fmt.Println(names[i])
+	
+	for index, value := range names {
+		fmt.Printf("the value at index %v is %v \n", index, value)
 	}
 
 }
