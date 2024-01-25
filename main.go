@@ -53,6 +53,7 @@ func promptOptions(b *bill) {
 
 	case "s":
 		fmt.Println(b.format())
+		b.save()
 		fmt.Println("Bill saved.")
 		break
 
