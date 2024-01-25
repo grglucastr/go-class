@@ -2,39 +2,37 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"strings"
 )
 
-func sayGreeting(name string){
-	fmt.Printf("Good morning %v \n", name)
-}
+func getInitials(n string) (string, string){
 
-func sayBye(name string){
-	fmt.Printf("Goodbye %v\n", name)
-}
+	s := strings.ToUpper(n)
+	names := strings.Split(s, " ")
 
-func cycleNames(names[] string, f func(string)){
-	for _, value := range names{
-		f(value)
+	var initials []string
+
+	for _, v := range names {
+		initials = append(initials, v[:1])
 	}
+
+	if len(initials) > 1{
+		return initials[0], initials[1]
+	}
+
+	return initials[0], "_"
 }
 
-func circleArea(radius float64) float64 {
-	return math.Pi * radius * radius
-}
 
 func main() {
 
-	names := []string{"cloud", "tifa", "barret"}
-	
-	cycleNames(names, sayGreeting)
-	cycleNames(names, sayBye)
+	fn, sn := getInitials("george nunes")
+	fmt.Printf("\nFirst name: %v | Last name: %v\n", fn, sn)
 
-	a1 := circleArea(10.5)
-	a2 := circleArea(15)
+	fn2, sn2 := getInitials("lucas bentes")
+	fmt.Printf("\nFirst name: %v | Last name: %v\n", fn2, sn2)
 
-	fmt.Println(a1, a2)
-	fmt.Printf("circle 1 is %0.3f and circle 3 is %0.3f\n", a1, a2)
-
+	fn3, sn3 := getInitials("gus")
+	fmt.Printf("\nFirst name: %v | Last name: %v\n", fn3, sn3)
 
 }
